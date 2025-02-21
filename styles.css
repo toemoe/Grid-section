@@ -1,0 +1,212 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-500: hsl(263, 55%, 52%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey-200);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container_one, .container_two {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.card_one, .card_two, .card_three, .card_four, .left_card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card_one, .card_four {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 20rem;
+}
+
+.picture {
+    align-items: center;
+    align-self: center;
+    margin-left: 26rem;
+    margin-top: 1.5rem;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    opacity: 0.6; /* Сам элемент виден, но текст под ним читается */
+    pointer-events: none;
+}
+
+.card_three, .card_two {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 20rem;
+}
+
+.left_card {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 41.5rem;
+}
+
+.h1 {
+    font-weight: 400;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    font-size: 1.4rem;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 1.04rem;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+}
+
+.graduate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.graduate .verify_graduate {
+    font-size: 0.8rem;
+}
+
+.graduate .verify {
+    font-size: 1rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    margin-right: 1rem;
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.card_three h1, .left_card h1 {
+    color: var(--grey-500);
+}
+
+.card_three, .left_card {
+    color: var(--grey-400);
+}
+
+.card_three .graduate .verify, .left_card .graduate .verify {
+    color: var(--grey-500);
+}
+
+.card_four {
+    background-color: var(--dark-blue);
+    color: var(--grey-200);
+}
+
+.card_two {
+    background-color: var(--grey-400);
+    color: var(--grey-100);
+}
+
+.card_one {
+    position: relative;
+    background-color: var(--purple-500);
+    color: var(--grey-100);
+}
+
+@media (max-width: 768px) {
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .container_main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container_one, .container_two {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .card_one, .card_two, .card_three, .card_four, .left_card {
+        width: 85%;
+        height: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+        margin: 0.5rem 0;
+        padding: 1.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem; /* Закругление углов */
+        margin-left: auto;  /* Центрирование карточек по горизонтали */
+        margin-right: auto; /* Центрирование карточек по горизонтали */
+    }
+
+    .picture {
+        display: none;
+    }
+}
